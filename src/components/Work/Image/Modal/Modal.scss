@@ -1,0 +1,14 @@
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 1254px;
+  height: 620px;
+  & img {
+    object-fit: contain;
+  }
+}
+.ReactModal_Content {
+  padding: 0px;
+}

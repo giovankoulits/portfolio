@@ -1,0 +1,148 @@
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.sub-bar {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .sub-bar.fade-in {
+    animation: fadeInRight 0.5s ease-in-out;
+  }
+
+  .sub-bar.fade-out {
+    animation: fadeOutRight 0.5s ease-in-out;
+  }
+
+  .sub-bar {
+    display: flex;
+    background: #181818;
+    width: 100vw;
+    height: 48px;
+    top: 0;
+    font-family: 'Prompt Light', sans-serif;
+    animation: fadeInRight 0.5s ease-in-out;
+    z-index: 1;
+    nav {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+
+      .sub-nav-pages {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+      }
+      .nav-social {
+        display: flex;
+        width: 100%;
+        align-items: center;
+
+        a:hover {
+          color: #00d86c;
+        }
+      }
+
+      a {
+        font-size: 22px;
+        color: #4d4d4e;
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        padding-left: 10px;
+        padding-right: 20px;
+        line-height: 10px;
+        i {
+          transition: all 0.3s ease-out;
+        }
+
+        &:hover {
+          color: #00d86c;
+
+          svg {
+            opacity: 0;
+          }
+
+          &:after {
+            opacity: 1;
+          }
+        }
+
+        &:after {
+          content: '';
+          font-size: 8px;
+          letter-spacing: 2px;
+          bottom: 0;
+          width: 100%;
+          text-align: center;
+          opacity: 0;
+          -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+          letter-spacing: 2px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          margin-left: -22px;
+        }
+      }
+
+      a.home-link {
+        &:after {
+          content: 'HOME';
+        }
+      }
+
+      a.about-link {
+        &:after {
+          content: 'ABOUT';
+        }
+      }
+
+      a.work-link {
+        &:after {
+          content: 'WORK';
+        }
+      }
+
+      a.progs-link {
+        &:after {
+          content: 'CODE';
+        }
+      }
+
+      a.contact-link {
+        &:after {
+          content: 'CONTACT';
+        }
+      }
+
+      a.active {
+        svg {
+          color: #00d86c;
+        }
+      }
+    }
+  }
+}

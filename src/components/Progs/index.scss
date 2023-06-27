@@ -1,0 +1,49 @@
+.work-page,
+.progs-page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin-left: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 33vw;
+  height: 34%;
+  margin: 0px;
+  overflow: hidden;
+  &a {
+    width: 100%;
+  }
+  & img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s;
+    opacity: 0.6;
+    object-fit: cover;
+  }
+  & img:hover {
+    cursor: pointer;
+    transform: scale(1.25);
+    transform-origin: 50% 50%;
+    opacity: 1;
+  }
+}
+.box.progs-box {
+  width: 33vw;
+  height: 34%;
+}
+
+.fade-in {
+  animation: fade-in 2s linear;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
