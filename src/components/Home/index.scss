@@ -80,5 +80,23 @@
       padding-left: 10%;
       width: 85%;
     }
+
+    h1 {
+      color: #fff;
+      font-size: 50px;
+      line-height: 40px;
+      margin: 0;
+      font-family: 'Coolvetica';
+      font-weight: 400;
+
+      img {
+        margin-left: 15px;
+        opacity: 0;
+        width: 30px;
+        height: auto;
+        animation: rotateIn 1s linear both;
+        animation-delay: 2.5s;
+      }
+    }
   }
 }
