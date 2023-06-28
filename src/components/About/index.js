@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
 import { Link } from 'react-router-dom'
+import ParticlesBg from './Particles/ParticlesBg'
 import {
   faCss3,
   faGitAlt,
@@ -50,6 +51,7 @@ const About = () => {
 
         <div className="stage-cube-cont">
           <div className="showMe">
+            <ParticlesBg />
             <div className="cubespinner ">
               <div className="face1">
                 <FontAwesomeIcon icon={faWordpress} color="#41A2CA" />

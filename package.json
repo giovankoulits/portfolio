@@ -21,10 +21,11 @@
     "react-leaflet": "3.2.5",
     "react-loaders": "3.0.1",
     "react-modal": "^3.16.1",
-    "react-particles-js": "^3.6.0",
     "react-router-dom": "6.2.2",
     "react-scripts": "5.0.0",
+    "react-tsparticles": "^2.10.1",
     "sass": "1.49.9",
+    "tsparticles": "^2.10.1",
     "web-vitals": "2.1.4"
   },
   "scripts": {

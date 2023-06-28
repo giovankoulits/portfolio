@@ -14,14 +14,18 @@
 }
 
 .stage-cube-cont {
+  position: absolute;
+  left: 50%;
   width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  height: 80vh;
 }
 
 .cubespinner {
-  margin-top: -225px;
+  top: -12vh;
+  position: relative;
   animation-name: spincube;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -43,6 +47,7 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 20px 0px lightyellow;
+    z-index: 10;
   }
 
   .face1 {
@@ -74,6 +79,18 @@
 .showMe {
   animation: cssAnimation 0s 2s forwards;
   visibility: hidden;
+}
+
+#tsparticles {
+  position: absolute;
+  height: 80vh;
+  width: 100%;
+}
+
+.stage-cube-cont .showMe {
+  min-height: 80vh;
+  width: 100%;
+  padding: 0px;
 }
 
 @keyframes cssAnimation {
