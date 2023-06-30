@@ -8,7 +8,10 @@
     animation: fadeIn 1s 1.7s backwards;
   }
 }
-
+span.skills {
+  color: #00d86c;
+  font-size: 18px;
+}
 .eighty-percent {
   width: 80%;
 }
@@ -83,7 +86,7 @@
 
 #tsparticles {
   position: absolute;
-  height: 80vh;
+  height: 100vh;
   width: 100%;
 }
 

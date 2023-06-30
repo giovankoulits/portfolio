@@ -5,14 +5,14 @@ const options = {
   },
   particles: {
     number: {
-      value: 80,
+      value: 160,
       density: {
         enable: false,
         value_area: 800,
       },
     },
     color: {
-      value: '#4D4D4E',
+      value: '#C9C9C5',
     },
     shape: {
       type: 'circle',
@@ -28,7 +28,7 @@ const options = {
       },
     },
     size: {
-      value: 3,
+      value: 1,
       random: false,
       anim: {
         enable: false,
@@ -51,7 +51,7 @@ const options = {
     move: {
       enable: true,
       speed: 2,
-      direction: 'none',
+      direction: 'top',
       random: false,
       straight: false,
       out_mode: 'out',

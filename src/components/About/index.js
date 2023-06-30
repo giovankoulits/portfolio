@@ -40,7 +40,10 @@ const About = () => {
             </p>
             <p align="LEFT">
               I have experience as a web designer and frontend developer. Tools
-              that i use include: Javascript, React, Sass, Git and more.
+              that i use include:{' '}
+              <span className="skills">
+                Javascript, React, Sass, Git and more.
+              </span>
             </p>
             <p>I am comfortable working with teams as well as solo! </p>
             <Link to="/work" className="flat-button">
