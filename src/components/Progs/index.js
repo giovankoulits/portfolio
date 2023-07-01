@@ -1,32 +1,62 @@
 import Sidebar from '../Sidebar'
-import './index.scss'
-import Loader from 'react-loaders'
-import { useState, useEffect } from 'react'
 import Script from './Script/Script'
 import scriptsArray from './scriptsArray'
 import Topbar from '../Topbar'
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Navigation } from 'swiper'
+// Import Component & Swiper styles
+import './index.scss'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import { nanoid } from 'nanoid'
 
 const Progs = () => {
-  const [visible, setVisible] = useState('none')
-
-  useEffect(
-    () =>
-      setTimeout(() => {
-        setVisible('flex')
-      }, 2000),
-    []
-  )
-
   return (
     <div className="App">
       <Sidebar />
       <Topbar />
-      <div className="progs-page fade-in" style={{ display: visible }}>
+      <div className="progs-page ">
         {scriptsArray.map((script, i) => (
-          <Script bg key={i} src={script.src} link={script.link} />
+          <Script
+            bg
+            index={i}
+            key={nanoid()}
+            src={script.src}
+            link={script.link}
+          />
         ))}
       </div>
-      <Loader type="pacman" />
+
+      <Swiper
+        modules={[Pagination, Navigation]}
+        pagination={{ clickable: true }}
+        navigation
+      >
+        {scriptsArray.map((slide, i) => {
+          const slidePath = require(`../../assets/scripts/${slide.src}.png`)
+          return (
+            <div key={nanoid()} className="swiper-slide">
+              <SwiperSlide key={i + 'e'}>
+                <a
+                  key={nanoid()}
+                  className="anchor-icon"
+                  target="_blank"
+                  rel="noreferrer"
+                  href={slide.link}
+                >
+                  <img
+                    key={nanoid()}
+                    onClick={() => console.log('hi')}
+                    src={slidePath}
+                    alt={`${slide}`}
+                  />
+                </a>
+              </SwiperSlide>
+            </div>
+          )
+        })}
+      </Swiper>
     </div>
   )
 }

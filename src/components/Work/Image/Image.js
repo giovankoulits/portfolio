@@ -3,7 +3,7 @@ import '../index.scss'
 import { useState } from 'react'
 import MyModal from './Modal/MyModal'
 
-const Image = ({ src }) => {
+const Image = ({ src, index }) => {
   const [modalOpen, setModalOpen] = useState(false)
 
   function closeModal() {
@@ -15,7 +15,12 @@ const Image = ({ src }) => {
   return (
     <>
       <div onClick={() => setModalOpen(true)} className="box work-box">
-        <img src={imagePath} />
+        <img
+          style={{
+            animation: `bounce-in-right ${1 + index / 5}s ease`,
+          }}
+          src={imagePath}
+        />
       </div>
       <MyModal src={src} openModal={modalOpen} closeModal={closeModal} />
     </>

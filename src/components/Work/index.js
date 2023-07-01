@@ -1,13 +1,16 @@
 import Sidebar from '../Sidebar'
 import Topbar from '../Topbar'
+import { nanoid } from 'nanoid'
 
-import './index.scss'
-import Loader from 'react-loaders'
-import { useState, useEffect } from 'react'
 import Image from './Image/Image'
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Navigation } from 'swiper'
+// Import Component & Swiper styles
+import './index.scss'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 const Work = () => {
-  const [visible, setVisible] = useState('none')
-
   const imagesArray = [
     'boussias',
     'dei_bite',
@@ -22,24 +25,35 @@ const Work = () => {
     'phonie_berlin',
     'sonnenkita',
   ]
-  useEffect(
-    () =>
-      setTimeout(() => {
-        setVisible('flex')
-      }, 2000),
-    []
-  )
 
   return (
     <div className="App">
       <Sidebar />
       <Topbar />
-      <div className="work-page fade-in" style={{ display: visible }}>
+
+      <div className="work-page">
         {imagesArray.map((image, i) => (
-          <Image bg key={i} src={image} />
+          <Image bg index={i} key={nanoid()} src={image} />
         ))}
       </div>
-      <Loader type="pacman" />
+
+      <Swiper
+        modules={[Pagination, Navigation]}
+        pagination={{ clickable: true }}
+        navigation
+        /*   navigation={{ clickable: true }} */
+      >
+        {imagesArray.map((slide, i) => {
+          const slidePath = require(`../../assets/sites/${slide}.png`)
+          return (
+            <div className="swiper-slide">
+              <SwiperSlide key={nanoid()}>
+                <img key={nanoid()} src={slidePath} alt={`${slide}`} />
+              </SwiperSlide>
+            </div>
+          )
+        })}
+      </Swiper>
     </div>
   )
 }

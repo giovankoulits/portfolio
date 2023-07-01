@@ -1,6 +1,7 @@
 $primary-color: #00d86c;
 $secondary-color: #1d1c1c;
 
+//Fonts
 @import 'animate.css';
 @import '~loaders.css/src/animations/pacman.scss';
 
@@ -27,6 +28,7 @@ $secondary-color: #1d1c1c;
   font-style: normal;
 }
 
+//Pacman
 .loader-hidden {
   display: none;
 }
@@ -46,6 +48,7 @@ $secondary-color: #1d1c1c;
   transform: scale(2);
 }
 
+//Button
 .flat-button {
   color: #00d86c;
   font-size: 13px;
@@ -67,12 +70,122 @@ $secondary-color: #1d1c1c;
   }
 }
 
+//Swiper
+.swiper-wrapper {
+  display: none;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  display: none;
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  //Swiper
+  .swiper-pagination-bullet {
+    background: #00d86c !important;
+  }
+
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after {
+    content: '▶' !important;
+    color: #00d86c;
+    font-weight: 'bold' !important;
+    display: flex !important;
+    font-size: 20px;
+  }
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after {
+    content: '◀' !important;
+    color: #00d86c;
+    font-weight: 'bold' !important;
+    font-size: 20px;
+    display: flex !important;
+  }
+
+  .swiper {
+    overflow: hidden;
+    display: flex;
+    box-sizing: border-box;
+    height: 94vh;
+
+    .swiper-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center !important;
+      box-sizing: border-box;
+    }
+    .swiper-slide {
+      margin: 0 !important;
+      padding: 0 !important;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+  }
+
+  .App .work-page,
+  .App .progs-page {
+    display: none;
+  }
+}
 @media only screen and (max-width: 768px) {
+  //Button
   .flat-button {
     font-size: 11px;
     font-weight: 400;
     letter-spacing: 3px;
     padding: 8px 15px;
     margin-top: 20px;
+  }
+
+  //Pacman
+  .loader-active {
+    transform: scale(1);
+  }
+
+  //Swiper
+  .swiper-pagination-bullet {
+    background: #00d86c !important;
+  }
+
+  .swiper {
+    overflow: hidden;
+    display: flex;
+    box-sizing: border-box;
+
+    .swiper-wrapper {
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+      height: 100vh;
+      align-items: center !important;
+      box-sizing: content-box;
+    }
+    .swiper-slide {
+      img {
+        width: 100vw;
+      }
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+  }
+
+  .App .work-page,
+  .App .progs-page {
+    display: none;
   }
 }
