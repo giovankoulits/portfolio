@@ -134,11 +134,6 @@ $secondary-color: #1d1c1c;
       align-items: center !important;
     }
   }
-
-  .App .work-page,
-  .App .progs-page {
-    display: none;
-  }
 }
 @media only screen and (max-width: 768px) {
   //Button
@@ -182,10 +177,5 @@ $secondary-color: #1d1c1c;
       justify-content: center !important;
       align-items: center !important;
     }
-  }
-
-  .App .work-page,
-  .App .progs-page {
-    display: none;
   }
 }

@@ -1,20 +1,23 @@
 import { useEffect, useState } from 'react'
-
+import LogoG from './LogoG'
+import LogoK from './LogoK'
+import LogoSub from './LogoSub'
 import './index.scss'
 
 const Logo = () => {
-  const [visible, setVisible] = useState('none')
+  const [visible, setVisible] = useState(false)
 
-  useEffect(() => {
-    return setTimeout(() => {
-      setVisible('flex')
-    }, 4000)
+  /*   useEffect(() => {
+    setTimeout(() => setVisible(true), 3000)
   }, [])
-
+ */
   return (
-    <div style={{ display: visible }} className="logo-container">
-      <br />
-      <div className="pulsating-circle"></div>
+    <div className="logo-container">
+      <div className="inner-container">
+        <LogoG />
+        <LogoK />
+      </div>
+      <LogoSub />
     </div>
   )
 }

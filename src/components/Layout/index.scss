@@ -140,6 +140,11 @@
   .bottom-tag {
     margin-left: 4vw;
   }
+
+  .App .work-page,
+  .App .progs-page {
+    display: none;
+  }
 }
 
 /* @media only screen and (max-width: 768px) {
@@ -158,16 +163,19 @@
     padding-top: 12vh;
   }
 
-  .text-zone {
-    padding-left: 8vw;
-  }
-
   .container {
     min-height: 90%;
     width: 100%;
-
     display: flex;
     flex-direction: column;
+  }
+
+  .text-zone {
+    padding-left: 8vw;
+  }
+  .App .work-page,
+  .App .progs-page {
+    display: none;
   }
 
   .tags {
