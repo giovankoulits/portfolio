@@ -1,18 +1,3 @@
-h1 {
-  color: aliceblue;
-}
-
-* {
-  margin: 0px;
-  padding: 0px;
-}
-
-/* .App {
-  min-height: 100vh;
-  min-width: 100vw;
-  box-sizing: border-box;
-  display: flex;
-} */
 .logo-container {
   height: 100%;
   width: 100%;
@@ -30,24 +15,16 @@ h1 {
   display: flex;
 }
 
-.svg {
-  object-fit: cover;
-  fill-opacity: 0;
-  stroke-width: 3px;
-  stroke-dasharray: 4500;
-  animation: draw 8s ease;
-}
-
 .logo-g-full {
   position: relative;
   left: -180px;
-  animation: fade-in 6s linear;
+  animation: 9s fade-in-logo linear;
 }
 
 .logo-k-full {
   position: relative;
   left: -186px;
-  animation: fade-in 6s linear;
+  animation: 9s fade-in-logo linear;
 }
 
 .logo-k {
@@ -58,32 +35,49 @@ h1 {
 .logo-sub {
   display: flex;
   margin-left: 5px;
+  animation: 9s fade-in-logo ease;
 }
 
-@keyframes fade-in {
+@keyframes fade-in-logo {
   0% {
     opacity: 0;
   }
 
-  25% {
+  50% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
 
+.svg {
+  object-fit: cover;
+  fill-opacity: 0;
+  stroke-width: 3px;
+  stroke-dasharray: 4500;
+  animation: 14s draw ease;
+}
+
 @keyframes draw {
   0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
     stroke-dashoffset: 4500;
   }
   100% {
+    opacity: 1;
     stroke-dashoffset: 0;
   }
 }
 
-@media only screen and (max-width: 1200px) {
-  .logo-container {
+@media only screen and (max-width: 1400px) {
+  .logo-container,
+  .inner-container {
     display: none;
   }
 }

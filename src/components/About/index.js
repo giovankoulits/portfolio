@@ -44,7 +44,7 @@ const About = () => {
               <span className="skills">Javascript, React, SCSS, Git</span> and
               more.
             </p>
-            <p>I am comfortable working with teams as well as solo! </p>
+            <p>I enjoy working with teams as well as solo! </p>
             <Link to="/work" className="flat-button">
               VISIT GALLERY
             </Link>
