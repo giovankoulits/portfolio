@@ -2,6 +2,10 @@ html {
   font-size: 62.5%;
 }
 
+::selection {
+  background-color: #00d86c75;
+}
+
 body {
   margin: 0;
   font: 300 11px/1.4 'Prompt Light', sans-serif;
