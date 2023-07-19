@@ -16,7 +16,7 @@ const Work = () => {
     'dei_bite',
     'egnatia_site',
     'kommerz_design',
-    'ppdk_law',
+    'omnulux',
     'restaurants',
     'iotty',
     'beard_club',
