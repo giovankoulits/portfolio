@@ -12,7 +12,7 @@ const Script = ({ src, link, index }) => {
           }}
           src={imagePath}
         />
-        <h1 class="box-h1">Hi</h1>
+        <h1 className="box-h1">Hi</h1>
         <button>Hello</button>
       </a>
     </div>
