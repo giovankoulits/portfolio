@@ -14,10 +14,10 @@ const scriptsArray = [
   { src: 'quiz', link: 'https://quizzical-jsx123.netlify.app/' },
   { src: 'whack_a_mole', link: 'https://whack-a-mole-js123.netlify.app/' },
 
-  /* {
+  {
     src: 'react_hangman',
     link: 'https://giovankoulits-react-hangman.netlify.app/',
-  }, */
+  },
 ]
 
 export default scriptsArray
