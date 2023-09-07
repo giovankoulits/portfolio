@@ -10,7 +10,7 @@ const scriptsArray = [
   },
   {
     src: 'movie_sorter',
-    link: 'https://app.netlify.com/sites/giovankoulits-movie-sorter/overview',
+    link: 'https://giovankoulits-movie-sorter.netlify.app/',
   },
   { src: 'e_shop', link: 'https://react-eshop-jsx234.netlify.app/' },
   { src: 'notes', link: 'https://notes-app-jsx345.netlify.app/' },
